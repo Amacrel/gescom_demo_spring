@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class GescomDemoSpringApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(GescomDemoSpringApplication.class, args);
+
 	}
 
 }
