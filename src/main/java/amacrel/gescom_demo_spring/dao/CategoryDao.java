@@ -18,7 +18,7 @@ public class CategoryDao {
     }
 
     public Category getCategoryById(int categoryId) {
-        return this.categoryRepository.findOneCategoryById(categoryId);
+        return this.categoryRepository.getById(categoryId);
     }
     public void addCategory(Category category) {
         this.categoryRepository.save(category);
