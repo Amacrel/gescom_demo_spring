@@ -2,6 +2,8 @@ package amacrel.gescom_demo_spring.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "category")
@@ -11,8 +13,9 @@ public class Category implements Serializable {
     @Column(name = "id_category")
     private int idCategory;
     @Column(name = "name_category")
-
     private String name;
+    @OneToMany(mappedBy = "categoryJoin", targetEntity = Product.class)
+    private List<Product> listProduct = new ArrayList<Product>();
 
     public Category(String name, int idCategory) {
         super();
@@ -42,6 +45,6 @@ public class Category implements Serializable {
 
     @Override
     public String toString() {
-        return super.toString();
+        return this.idCategory + " (" + this.name + ")";
     }
 }

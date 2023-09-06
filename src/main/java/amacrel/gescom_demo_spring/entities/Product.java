@@ -29,7 +29,7 @@ public class Product implements Serializable {
     private String imageProduct;
     // attribut de type object pour la jointure
     @ManyToOne
-    @JoinColumn(name = "")
+    @JoinColumn(name = "id_category")
     private Category categoryJoin;
 
 }
